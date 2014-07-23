@@ -1,9 +1,3 @@
-'''
-Name: Angel Romero
-Course Number: CSE 6331 Cloud Computing
-Lab: Assignment 1
-'''
-
 import pyinotify
 import os
 import sys
@@ -16,15 +10,9 @@ pyinotify
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_ACCESS(self, event):
         print "ACCESS event:", event.pathname
-        #docSigner = DocSigner()
-        #docSigner.getSettings()
-        #docSigner.verifyFile(event.pathname)
 
     def process_IN_ATTRIB(self, event):
         print "ATTRIB event:", event.pathname
-
-    #def process_IN_CLOSE_NOWRITE(self, event):
-        #print "CLOSE_NOWRITE event:", event.pathname
 
     def process_IN_CLOSE_WRITE(self, event):
         print "CLOSE_WRITE event:", event.pathname
